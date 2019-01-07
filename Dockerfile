@@ -5,7 +5,7 @@ RUN apt-get install -y unzip curl
 RUN url=$(curl -s https://minecraft.net/en-us/download/server/bedrock/ | grep bin-linux | sed "s/.*href=['\"]\([^'\"]*\)['\"].*/\1/g"); curl $url --output bedrock.zip
 RUN unzip bedrock.zip -d MinecraftBDE
 RUN rm bedrock.zip
-RUN rm server.properties
+RUN rm /MinecraftBDE/server.properties
 
 WORKDIR /MinecraftBDE
 ENV LD_LIBRARY_PATH=.
