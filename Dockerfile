@@ -11,3 +11,5 @@ ENV LD_LIBRARY_PATH=.
 CMD ./bedrock_server
 
 EXPOSE 19132/udp
+VOLUME /MinecraftBDE/worlds
+VOLUME /MinecraftBDE/server.properties
